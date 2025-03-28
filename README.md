@@ -2,6 +2,9 @@
 
 This repository follows a clean, layered architecture for a Go REST API application. This structure is designed to promote separation of concerns, testability, and maintainability.
 
+- To run the project do:  ```  go run cmd/api/main.go ```
+
+
 ## Project Structure
 ```
 Project Root/
@@ -86,3 +89,19 @@ func (s *UserService) GetUserByID(id string) (*User, error) {
     return user, nil
 }
 ```
+
+
+
+### Running the Project with Air
+
+To use Air for live reloading during development:
+
+#### Install Air 
+```
+go install github.com/cosmtrek/air@latest
+```
+
+#### Running the project with Air:
+```cd cmd/api && air```
+
+This will watch for file changes and automatically restart the application for a smoother development experience.
